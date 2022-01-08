@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation.xml"
+    app:startDestination="@id/locationFragment">
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.geektech.a3dz8rickandmorty.ForCharacter.CharacterFragment"
+        android:label="fragment_character"
+        tools:layout="@layout/fragment_character" >
+        <action
+            android:id="@+id/action_characterFragment_to_signInScreenFragment"
+            app:destination="@id/signInScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.geektech.a3dz8rickandmorty.ForLocation.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/signInScreenFragment"
+        android:name="com.geektech.a3dz8rickandmorty.ForSingInScreenFragment.SignInScreenFragment"
+        android:label="fragment_sign_in_screen"
+        tools:layout="@layout/fragment_sign_in_screen" >
+        <argument
+            android:name="name"
+            app:argType="com.geektech.a3dz8rickandmorty.ForCharacter.CharacterModel" />
+    </fragment>
+
+</navigation>
